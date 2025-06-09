@@ -27,7 +27,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "target/*.jar"
-          target: "~/target/"
+          target: "~/"
           rm: false
 
       - name: Run deployment script
