@@ -1,12 +1,3 @@
-#server.port=8761
-#
-#spring.application.name=eureka-server
-#
-#server.shutdown=graceful
-#spring.lifecycle.timeout-per-shutdown-phase=10s
-#
-#eureka.client.register-with-eureka=false
-#eureka.client.fetch-registry=false
 server:
   port: ${PORT:10372}
   shutdown: graceful
@@ -21,6 +12,11 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:10372/eureka/
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0
 
 management:
   endpoints:
